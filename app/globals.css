@@ -38,6 +38,11 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  /* customised */
+  --color-subtle: rgb(60, 60, 60);
+  --radius-s: 6px;
+  --bg-opaque: rgba(128, 128, 128, 0.139);
 }
 
 button {
@@ -108,4 +113,8 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+p {
+  white-space: pre-line
 }

@@ -6,9 +6,6 @@
   padding: 6rem;
   min-height: 100vh;
   --general-padding: 0.3rem 1rem;
-  --color-subtle: rgb(60, 60, 60);
-  --radius-s: 5px;
-  --bg-opaque: rgba(128, 128, 128, 0.139);
 }
 
 .inputSection {
@@ -23,6 +20,14 @@
   margin-bottom: 20vh;
 }
 
+.inputSection::before,
+.inputSection::after {
+  content: '';
+  left: 50%;
+  position: absolute;
+  filter: blur(45px);
+  transform: translateZ(0);
+}
 .inputSection::before {
   background: var(--secondary-glow);
   border-radius: 50%;
@@ -38,18 +43,8 @@
   z-index: -1;
 }
 
-.inputSection::before,
-.inputSection::after {
-  content: '';
-  left: 50%;
-  position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
-}
-
 .inputSection > h1 {
   color: rgba(192, 192, 192, 0.167);
-  /* padding: var(--general-padding); */
   font-weight: 900;
   font-size: 4.5rem;
   letter-spacing: 0.1rem;
@@ -80,12 +75,12 @@
   background-color: var(--bg-opaque);
 }
 
-.inputSection .inputDiv > button {
+.inputSection .inputDiv > button,
+.inputSection .inputDiv > a {
   padding: var(--general-padding);
   background-color: var(--bg-opaque);
   border: none;
   color: rgba(255, 255, 255, 0.7);
-  /* border: solid 0.5px var(--bg-opaque); */
   border-radius: var(--radius-s);
   transition: all 0.2s ease-in-out;
 }
@@ -105,7 +100,6 @@
 }
 .footer {
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   gap: 1rem;
   justify-content: center;

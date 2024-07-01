@@ -1,8 +1,110 @@
-.main {
+.qaSection {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
+  margin: 0 auto;
+  align-items: flex-start;
+  padding: 1rem 6rem;
   min-height: 100vh;
+  max-width: 70vw;
+  gap: 2vh;
+  color: rgb(var(--));
+  --padding-general: 14px;
+}
+@media (max-width: 900px) {
+  .qaSection {
+    padding: 1rem;
+    max-width: 100vw;
+  }
+}
+
+.qaSection > div {
+  padding: var(--padding-general);
+}
+.queryDiv {
+}
+
+.answerDiv {
+  position: relative;
+  font-size: 0.9rem;
+  background-color: var(--bg-opaque);
+  border-radius: var(--radius-s);
+  color: rgb(231, 231, 231);
+  line-height: 2rem;
+  white-space: pre-line;
+}
+.answerDiv::before,
+.answerDiv::after {
+  content: '';
+  /* left: 50%; */
+  top: 0;
+  position: absolute;
+  filter: blur(45px);
+  /* transform: translateZ(0); */
+}
+.answerDiv::before {
+  background: var(--secondary-glow);
+  border-radius: 50%;
+  width: 50vw;
+  height: 70vh;
+  /* margin-left: -800px; */
+  z-index: -1;
+}
+.answerDiv::after {
+  /* background: var(--primary-glow); */
+  width: 440px;
+  height: 280px;
+  z-index: -1;
+}
+
+.sourcesDiv {
+  align-self: flex-start;
+  width: 100%;
+}
+.sourcesDiv > details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+.card {
+  padding: 12px;
+  background-color: var(--color-subtle);
+  border-radius: var(--radius-s);
+  width: 100%;
+  flex: 1;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+}
+
+.card:hover {
+  background-color: var(--bg-opaque);
+}
+
+.card > .name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card > .snippet {
+}
+
+.iconFromUrlPlaceholder {
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-s);
+  background-color: var(--bg-opaque);
+}
+
+.relatedQ {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: 100%;
+  gap: 1rem;
+}
+.relatedQ > .card {
 }
